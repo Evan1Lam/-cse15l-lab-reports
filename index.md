@@ -1,8 +1,14 @@
 testing index
 *Italic*
 **Bold**
+
 # Heading 1
 ## Heading 2
+
+**More bold edit**
+
+# Another Heading 
+
 [Link](https://github.com/Evan1Lam/-cse15l-lab-reports/tree/main)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Pac_Man.svg/1200px-Pac_Man.svg.png)
 >Blockquote
