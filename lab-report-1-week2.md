@@ -1,4 +1,4 @@
-![Image](LabImage1.png)
+
 # Log Onto Course Specific Account ieng6
 ## Installing Visual Studio Code
 ![Image](VisualStudioCodeSS.png)
@@ -33,7 +33,7 @@
 
 * Run the command scp (insert file name) cs15lsp22zz@ieng6.ucsd.edu:~/, and enter your password. The file will be moved over.
 
-* If we connect to remote computer using ssh, we can run the command ls and see the file in the directory, indicating the file moved successfully. We can work with this file on the remote computer now. 
+* If we connect to remote computer using ssh, we can run the command ls and see the file in the directory, indicating the file moved successfully. We can work with this file on the remote computer now. (note: image above displays the file WhereAmI.java on the remote directory after doing scp) 
 
 ## Setting an SSH Key
 ![Image](SettingSHHKey.png)
@@ -45,6 +45,15 @@
 * scp the public key id_rsa.pub to the .ssh directory that was just created. Use the command scp /Users/(enter Username on computer)/.ssh/id_rsa.pubcs15lsp22auq@ieng6.ucsd:~/.ssh/authorized_keys. Now that the public key is saved in the remote directory, when we try to ssh again to connect to the remote computer, it will not longer ask for our password. 
 
 
+
+## Optimizing Remote Running
+![Image](OptimizingRemoteRunning.png)
+
+* Now with ssh keys set up where we don't need to type in our password, we can efficiently run multiple commands in one command line
+
+* Use ";" to seperate commands on one line, and surround a command with "" at the end of an ssh command to immidiatley run it. (note, can only run one command per ssh command, to run multiple we need to have another ssh which example above demonstrates)
+
+* The example above demonstrates making an edit to a file, running scp on it, and then running ssh on it to complile and run the program in the file.
 
 
 
