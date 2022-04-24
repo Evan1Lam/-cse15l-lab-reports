@@ -1,7 +1,7 @@
 
 # Coding Changes to fix bugs in Markdown Parse Code
 ## Coding change 1
-![Image](FirstChange.png)
+![Image](firstChange.png)
 
 *first test file with failure inducing input: extra parenthesis at the end of link*
 * [firstTestFile](https://github.com/Evan1Lam/markdown-parser/blob/main/newTest-file.md)
