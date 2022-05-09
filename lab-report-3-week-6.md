@@ -5,11 +5,11 @@
 
 ![Image](sshConfig.png)
 
-* we can now ssh by just typing `ssh ieng6` instead of having to type out the entire username `cs15lsp22auq@ieng.ucsd.edu`.
+* we can now `ssh` by just typing `ssh ieng6` instead of having to type out the entire username `cs15lsp22auq@ieng.ucsd.edu`.
 
 ![Image](shhCommand.png)
 
-* we can also scp with this abreviated new hostname, by just typing `scp <file name> ieng6:~/`. As seen in the image this successfully copies a file into our remote computer.
+* we can also `scp` with this abreviated new hostname, by just typing `scp <file name> ieng6:~/`. As seen in the image this successfully copies a file into our remote computer.
 
 ![Image](scpCommand.png)
 
@@ -24,7 +24,7 @@
 
 **public key stored in user account**
 
-* to view this, ssh into remote computer, enter `cd .ssh`, then enter `ls -al`, and the ssh keys will display. `id-rsa.pub` is the public key, and we can enter `more id_rsa.pub` to view the key itself 
+* to view this, `ssh` into remote computer, enter `cd .ssh`, then enter `ls -al`, and the ssh keys will display. `id-rsa.pub` is the public key, and we can enter `more id_rsa.pub` to view the key itself 
 
 ![Image](publicKeyUserAccount.png)
 
@@ -42,10 +42,28 @@
 
 **link for resulting commit**
 
-* we can view the commit on gitHub by clicking on commits. Here is the link to a commit made on MarkdownParse.java, where a comment was added.
+* we can view the commit on gitHub by clicking on commits. Here is the link to a commit made on `MarkdownParse.java`, where a comment was added.
 
 [MardownParse.java commit Link](https://github.com/Evan1Lam/markdown-parser/commit/b82543af9e48dddc7c064757126b928151bca015)
 
+## Copy whole directories with scp -r
+
+* enter  `scp-r . cs15lsp22auq@ieng6.ucsd.edy:~/markdown-parse` to copy the whole `mardown-parser` directory into ieng6 account. I entered `scp-r . cs15lsp22auq@ieng6.ucsd.edy:~/UCSD/lab3/markdown-parse` to copy this in a new folder, to avoid overriding the exisitng markdown parse. 
+
+![Image](CopyingWholeMDparse.png)
+
+* now that the entire directory is in `ssh` account, we can run commands in command line such as tests for files in the directory. This image demonstrates running tests in the command line for `MarkdownParseTest.java`
+
+![Image](runningTests.png)
+
+* we can also run multiple commands in a single line, by seperating the commands with `;` and surrounding commands in `""` to immediately run them. 
+
+* the following images are an example of `scp` and `ssh` commands in a single line to copy a directory and run tests on it. 
+
+* Note: there are two java compilers installed on ieng6. When you `ssh` running the java command it goes to the previous compiler, but the code in `MarkdownParse.java` and `MarkdownParseTest.java` need to be compiled and run on the java-17 compiler, so you have to specify the whole absolute path to the java-17 compiler to compile the code, and specify the absolute path to the java-17 runtime to run the code. Similarly, specify the absolute path to the two jar files: `hamcrest.jar` and `Junit.jar`, in both the compiling and running of the program.
+
+![Image](multipleLinesOne.png)
+![Image](MultipleLinesTwo.png)
 
 
 
