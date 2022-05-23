@@ -2,13 +2,15 @@
 ## markdown-parse repository
  
  [my repository](https://github.com/Evan1Lam/markdown-parser.git)
+
+
  [reviewed repository](https://github.com/zayverrulez/markdown-parser.git)
 
  ## snippet 1
 
  **Expected Results:**
 
-* the only valid link is [another link](`google.com)`.
+* the only valid link is `[another link](`google.com)``.
  So, we expect only this link to be outputted and the other links should be disregarded. The output would be ``google.com`
 
 *Test for snippet 1*
