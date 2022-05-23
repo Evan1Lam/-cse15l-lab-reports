@@ -10,7 +10,7 @@
 
  **Expected Results:**
 
-* the only valid link is `[another link](`google.com)``.
+* the only valid link is [another link](`google.com)`.
  So, we expect only this link to be outputted and the other links should be disregarded. The output would be ``google.com`
 
 *Test for snippet 1*
